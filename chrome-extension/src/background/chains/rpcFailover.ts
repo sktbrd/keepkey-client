@@ -30,7 +30,7 @@ const FAILED_RPC_COOLDOWN_MS = 60_000;
 // blocking the other.
 const failedRpcs = new Map<string, number>();
 
-const isTransientRpcError = (errMsg: string): boolean => {
+export const isTransientRpcError = (errMsg: string): boolean => {
   const m = errMsg.toLowerCase();
   return (
     m.includes('rate limit') ||
